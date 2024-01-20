@@ -6,17 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-
-export function InputWithButton() {
-  return (
-    <div className="flex w-full max-w-sm items-center space-x-2">
-      <Input type="email" placeholder="Email" />
-      <Button type="submit">Subscribe</Button>
-    </div>
-  )
-}
 
 
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
@@ -53,9 +44,9 @@ export default function Home() {
           <Link
           className={buttonVariants({
             size: 'lg',
-            className: 'max-h ring-1 ring-inset ring-white bg-black',
+            className: 'max-h ring-1 ring-inset ring-white ring-opacity-50 bg-black',
           })}
-          href='/dashboard'
+          href='/'
           target='_blank'>
           Submit{' '}
           <ArrowRight className='ml-2 h-5 w-5' />
