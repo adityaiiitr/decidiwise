@@ -1,7 +1,8 @@
 
 
 "use client"
-import { useState } from 'react'
+import { useState, FormEvent } from 'react'
+
 // import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import FAQSection from '@/components/FAQSection'
@@ -77,7 +78,7 @@ export default function Home() {
 
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:FormEvent) => {
     e.preventDefault();
 
     try {

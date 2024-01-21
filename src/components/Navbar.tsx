@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Link from "next/link"
 import MaxWidthWrapper from "./MaxWidthWrapper"
 import { buttonVariants } from "./ui/button"
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 
 const Navbar = () => {
