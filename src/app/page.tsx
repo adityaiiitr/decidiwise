@@ -12,7 +12,7 @@ import CommunitySection from '@/components/CommunitySection'
 
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Loader, Loader2 } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
 
 
@@ -86,7 +86,9 @@ export default function Home() {
 
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [loading,setLoading] = useState(false);
   const handleSubmit = async (e:FormEvent) => {
+    setLoading(true);
     e.preventDefault();
 
     try {
@@ -110,12 +112,13 @@ export default function Home() {
     } catch (error) {
       console.error('Error submitting email:', error);
     }
+    setLoading(false);
   };
 
   return (
     <>
       {/* TOP VIEW SECTION */}
-      <MaxWidthWrapper className='mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center'>
+      <MaxWidthWrapper className='mb-12 mt-28 sm:mt-20 flex flex-col items-center justify-center text-center'>
         <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-700 hover:bg-white/50'>
           <p className='text-sm font-semibold text-white text-opacity-80'>
           Register Decidiwise For Early Access!
@@ -127,7 +130,7 @@ export default function Home() {
           <h1 className='max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl'>
           The simplest way to  {' '}
             <span className='text-blue-600'>Connect</span>{' '}
-            with College Seniors
+            with Seniors for real-time college experiences
           </h1>
           <p className='mt-5 max-w-4xl sm:text-lg text-white text-opacity-80'>
           Be the first to experience Decidiwise. Sign up now for early access and revolutionize the way you approach college decisions!
@@ -137,19 +140,20 @@ export default function Home() {
         <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center space-x-2 mt-5">
           <Input type="email" className="bg-white placeholder-opacity-80"placeholder="Enter your Email" value={email} onChange={(e) => {setEmail(e.target.value); console.log(email);}}/>
           {/* <Button type="submit">Subscribe</Button> */}
-          <button
+          <button disabled={loading}
           type="submit"
-          className={buttonVariants({
+          className={`${buttonVariants({
             size: 'lg',
             className: 'max-h ring-1 ring-inset ring-white ring-opacity-50 bg-black',
-          })}
+          })}`}
           >
-          Submit{' '}
-          <ArrowRight className='ml-2 h-5 w-5' />
+          {loading ? 'Submitting' : 'Submit'}
+          {loading ? <Loader className='animate-spin ml-2 h-5 w-5' />: <ArrowRight className='ml-2 h-5 w-5' />}
+          
 
         </button>
         </form>
-        <p className='text-white'>{message}</p>
+        <p className='text-white mt-2'>{message}</p>
 
         {/* </div> */}
 

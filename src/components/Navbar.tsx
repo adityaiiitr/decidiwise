@@ -41,6 +41,10 @@ const Navbar = () => {
 
   const navLinks = [
     {
+      title: "Home",
+      id: "/"
+    },
+    {
       title: "Features",
       id: "/#key-features-section",
     },
@@ -56,6 +60,7 @@ const Navbar = () => {
       title: "Who Are We?",
       id: "/who-are-we",
     },
+    
   ];
 
   return (
@@ -87,7 +92,7 @@ const Navbar = () => {
                   className={`${buttonVariants({
                     variant: "ghost",
                     size: "sm",
-                  })} cursor-pointer ${pathname === nav.id ? 'overline' : ''}`}
+                  })} cursor-pointer ${pathname === nav.id ? 'overline text-opacity-20' : ''}`}
                   onClick={() => setActive(nav.title)}
                 >
                   {nav.title}
