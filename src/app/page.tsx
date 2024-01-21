@@ -1,5 +1,7 @@
 
 
+"use client"
+import { useState } from 'react'
 // import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import FAQSection from '@/components/FAQSection'
@@ -73,7 +75,33 @@ export default function Home() {
     },
   ];
 
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    try {
+      const response = await fetch('https://decidiwise.onrender.com/api/submit-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Handle success
+        setMessage(data.message);
+      } else {
+        // Handle error
+        setMessage(data.error || data.message);
+      }
+    } catch (error) {
+      console.error('Error submitting email:', error);
+    }
+  };
 
   return (
     <>
@@ -96,20 +124,25 @@ export default function Home() {
           Be the first to experience Decidiwise. Sign up now for early access and revolutionize the way you approach college decisions!
           </p>
         </div>
-        <div className="flex w-full max-w-sm items-center space-x-2 mt-5">
-          <Input type="email" className="bg-white placeholder-opacity-80"placeholder="Enter your Email" />
+        {/* <div className="flex w-full max-w-sm items-center space-x-2 mt-5"> */}
+        <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center space-x-2 mt-5">
+          <Input type="email" className="bg-white placeholder-opacity-80"placeholder="Enter your Email" value={email} onChange={(e) => {setEmail(e.target.value); console.log(email);}}/>
           {/* <Button type="submit">Subscribe</Button> */}
-          <Link
+          <button
+          type="submit"
           className={buttonVariants({
             size: 'lg',
             className: 'max-h ring-1 ring-inset ring-white ring-opacity-50 bg-black',
           })}
-          href='/'
-          target='_blank'>
+          >
           Submit{' '}
           <ArrowRight className='ml-2 h-5 w-5' />
-        </Link>
-        </div>
+
+        </button>
+        </form>
+        <p className='text-white'>{message}</p>
+
+        {/* </div> */}
 
         
       </MaxWidthWrapper>
