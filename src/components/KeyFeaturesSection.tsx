@@ -22,16 +22,16 @@ const KeyFeaturesSection: React.FC<KeyFeaturesSectionProps> = ({ featuresData })
         </p>
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>
         {featuresData.map((feature, index) => (
           <div key={index} className='w-full p-[1px] rounded-[20px] ring ring-inset ring-white ring-opacity-80'>
-            <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
+            <div className='bg-tertiary rounded-[20px] py-5 px-8 min-h-[280px] flex justify-evenly items-center flex-col'>
               <Image
                 src={feature.imageSrc}
                 alt={feature.title}
                 width={100}
                 height={100}
-                className='w-16 h-16 object-contain bg-white p-2'
+                className='w-32 h-32 object-contain bg-white p-2 mb-2'
               />
 
               <h3 className='text-white text-[20px] font-bold text-center'>
