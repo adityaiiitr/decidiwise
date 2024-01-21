@@ -12,7 +12,7 @@ interface KeyFeaturesSectionProps {
 
 const KeyFeaturesSection: React.FC<KeyFeaturesSectionProps> = ({ featuresData }) => {
   return (
-    <div className='mx-auto w-full max-w-screen-xl px-2.5 md:px-20 mb-12 mt-28 sm:mt-40 text-white opacity-80 text-xl animate-in slide-in-from-bottom delay-150 duration-300'>
+    <div className='mx-auto w-full max-w-screen-xl px-2.5 md:px-20 mb-12 mt-28 sm:mt-40 text-white text-xl animate-in slide-in-from-bottom delay-150 duration-500'>
       <div className='sm:text-center'>
         <h2 className='mt-2 mb-4 font-bold text-4xl text-white sm:text-5xl'>
           Key Features
@@ -31,7 +31,7 @@ const KeyFeaturesSection: React.FC<KeyFeaturesSectionProps> = ({ featuresData })
                 alt={feature.title}
                 width={100}
                 height={100}
-                className='w-16 h-16 object-contain'
+                className='w-16 h-16 object-contain bg-white p-2'
               />
 
               <h3 className='text-white text-[20px] font-bold text-center'>

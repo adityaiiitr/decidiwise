@@ -41,33 +41,35 @@ export default function Home() {
     {
       title: 'Personalized Recommendations',
       description: 'Receive tailored recommendations based on your interests, goals, and preferences.',
-      imageSrc: '/images/mentor.svg',
+      imageSrc: '/images/personalized_recommendations.png',
     },
     {
       title: '1:1 Video Call Meet',
       description: 'Connect directly with senior students through our exclusive 1:1 video call feature.',
-      imageSrc: '/images/mentor.svg',
+      imageSrc: '/images/video_call.png',
     },
     {
       title: 'Campus Tours',
       description: 'Explore colleges through immersive campus tours videos.',
-      imageSrc: '/images/mentor.svg',
+      imageSrc: '/images/campus_tour.png',
     },
     {
       title: 'College Admission Process',
       description: 'Get full guidance on the college admission process.',
-      imageSrc: '/images/mentor.svg',
+      imageSrc: '/images/college_admission_process.png',
     },
   ];
 
   const communityData = [
     {
-      title: 'Mentors Boarded on [Platform Name]',
-      imageSrc: '/images/mentor.svg',
+      title: 'Mentors Boarded on Decidiwise',
+      count: 100
+      // imageSrc: '/images/mentor.svg',
     },
     {
-      title: 'Colleges available on [Platform Name]',
-      imageSrc: '/images/mentor.svg',
+      title: 'Colleges available on Decidiwise',
+      count: 25
+      // imageSrc: '/images/mentor.svg',
     },
   ];
 
@@ -175,6 +177,10 @@ export default function Home() {
       <div id="faq-section"></div>
 
       <FAQSection faqsData={faqsData} />
+
+      <div className="mt-8 h-32">
+
+      </div>
 
 
 

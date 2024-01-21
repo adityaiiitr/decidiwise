@@ -2,7 +2,8 @@ import Image from 'next/image';
 
 interface CommunityFeature {
   title: string;
-  imageSrc: string;
+  // imageSrc: string;
+  count: number;
 }
 
 interface CommunitySectionProps {
@@ -22,13 +23,14 @@ const CommunitySection: React.FC<CommunitySectionProps> = ({ communityData }) =>
         {communityData.map((feature, index) => (
           <div key={index} className='w-full p-[1px] rounded-[20px] ring ring-inset ring-white ring-opacity-80'>
             <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
-              <Image
+              {/* <Image
                 src={feature.imageSrc}
                 alt={feature.title}
                 width={100}
                 height={100}
                 className='w-16 h-16 object-contain'
-              />
+              /> */}
+              <p className='w-16 h-16 object-contain text-5xl font-serif font-bold'>{feature.count}</p>
 
               <h3 className='text-white text-[20px] font-bold text-center'>
                 {feature.title}
