@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-            'min-h-screen font-sans antialiased bg-[#030712]',
+            'min-h-screen font-sans grainy antialiased bg-[#030712]',
             inter.className
           )}>
         <Navbar/>

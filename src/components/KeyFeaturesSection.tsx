@@ -12,7 +12,7 @@ interface KeyFeaturesSectionProps {
 
 const KeyFeaturesSection: React.FC<KeyFeaturesSectionProps> = ({ featuresData }) => {
   return (
-    <div className='mx-auto w-full max-w-screen-xl px-2.5 md:px-20 mb-12 mt-28 sm:mt-40 text-white opacity-80 text-xl'>
+    <div className='mx-auto w-full max-w-screen-xl px-2.5 md:px-20 mb-12 mt-28 sm:mt-40 text-white opacity-80 text-xl animate-in slide-in-from-bottom delay-150 duration-300'>
       <div className='sm:text-center'>
         <h2 className='mt-2 mb-4 font-bold text-4xl text-white sm:text-5xl'>
           Key Features
