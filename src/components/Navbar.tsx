@@ -42,7 +42,7 @@ const Navbar = () => {
   const navLinks = [
     {
       title: "Features",
-      id: "#key-features-section",
+      id: "/#key-features-section",
     },
     {
       title: "Community",
