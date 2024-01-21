@@ -27,7 +27,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqsData }) => {
           {faqsData.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index + 1}`}>
               <AccordionTrigger className='text-center p-4 font-bold'>{faq.question}</AccordionTrigger>
-              <AccordionContent className='text-center'>
+              <AccordionContent className='px-4'>
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

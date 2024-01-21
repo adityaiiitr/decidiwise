@@ -31,13 +31,13 @@ const KeyFeaturesSection: React.FC<KeyFeaturesSectionProps> = ({ featuresData })
                 alt={feature.title}
                 width={100}
                 height={100}
-                className='w-32 h-32 object-contain bg-white p-2 mb-2'
+                className='w-32 h-32 object-contain bg-white p-2 mb-2 bg-blend'
               />
 
-              <h3 className='text-white text-[20px] font-bold text-center'>
+              <h3 className='text-white text-[24px] font-bold text-center py-2'>
                 {feature.title}
               </h3>
-              <p className='text-[16px] text-center'>
+              <p className='text-[16px] text-center leading-5'>
                 {feature.description}
               </p>
             </div>

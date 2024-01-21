@@ -59,9 +59,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="sticky top-0 z-30 w-full bg-[#030712]/70 backdrop-blur-lg transition-all">
+    <div className="sticky top-0 z-30 w-full bg-[#030712]/70 backdrop-blur-lg transition-all text-2xl">
       <MaxWidthWrapper>
-        <div className="flex h-14 items-center justify-between border-zinc-200 text-white opacity-80">
+        <div className="flex h-16 items-center justify-between border-zinc-200 text-white opacity-80">
           <Link href='/' className="flex z-40 font-bold">
             <span>Decidiwise</span>
           </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="hidden items-center space-x-4 sm:flex">
+          <div className="hidden items-center space-x-4 sm:flex text-xl">
             {navLinks.map((nav) => (
               <Link key={nav.id} href={nav.id}>
                 <div
@@ -102,9 +102,9 @@ const Navbar = () => {
       <div
         className={`${
           !toggle ? "hidden" : "flex"
-        } p-6 black-gradient absolute top-16 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl bg-[#030712]/70`}
+        } p-6 black-gradient absolute top-16 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl bg-[#030712]/90 bg-blur`}
       >
-        <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+        <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4 ">
           {navLinks.map((nav) => (
             <li
               key={nav.id}

@@ -32,12 +32,20 @@ export default function Home() {
     },
     {
       question: 'Which colleges are represented by mentors on Decidiwise?',
-      answer: 'As we grow, our expansion plan includes incorporating mentors from NITs, GFTIs, IITs, and other esteemed educational institutions. Our goal is to offer a broad spectrum of perspectives to help you make well-informed decisions about your academic journey.',
+      answer: 'We are actively working to expand our network, and currently, we have mentors from all IIITs.As we grow, our expansion plan includes incorporating mentors from NITs, GFTIs, IITs, and other esteemed educational institutions. Our goal is to offer a broad spectrum of perspectives to help you make well-informed decisions about your academic journey.',
     },
     {
       question: 'Will there be a cost associated with connecting with mentors on Decidiwise?',
       answer: 'Yes, there will be a nominal fee for accessing the full benefits of connecting with mentors on Decidiwise. This fee will help us ensure the quality of the interactions and provide you with a valuable experience as you seek personalized insights from experienced mentors.',
     },
+   {
+      question: 'Will the information provided by mentors on Decidiwise be verified?',
+      answer: 'We assure you that we will diligently verify the information provided by our mentors.We are committed to selecting experienced and knowledgeable mentors to ensure the accuracy and reliability of the insights they share. Your trust is our priority, and we will work to deliver credible and valuable information to aid in your decision-making process.',
+    },
+{
+      question: 'How can I contribute as a senior to Decidiwise?',
+      answer: 'If you are a senior willing to share your college experiences, you can express your interest by reaching out to our team at [email]. We welcome your valuable insights and look forward to having you contribute to Decidiwise.',
+    }
   ];
 
   const featuresData = [
@@ -66,13 +74,13 @@ export default function Home() {
   const communityData = [
     {
       title: 'Mentors Boarded on Decidiwise',
-      count: 100
-      // imageSrc: '/images/mentor.svg',
+      count: 100,
+      imageSrc: '/images/count100.png',
     },
     {
       title: 'Colleges available on Decidiwise',
-      count: 25
-      // imageSrc: '/images/mentor.svg',
+      count: 25,
+      imageSrc: '/images/count25.png',
     },
   ];
 
