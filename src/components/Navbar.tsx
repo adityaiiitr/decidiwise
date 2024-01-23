@@ -5,6 +5,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper"
 import { buttonVariants } from "./ui/button"
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+import { X,MoreVertical } from 'lucide-react'
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -64,9 +65,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="sticky top-0 z-30 w-full bg-[#030712]/70 backdrop-blur-lg transition-all text-2xl">
+    <div className="sticky top-0 z-30 w-full bg-white/70 backdrop-blur-lg transition-all text-2xl">
       <MaxWidthWrapper>
-        <div className="flex h-16 items-center justify-between border-zinc-200 text-white opacity-80">
+        <div className="flex h-16 items-center justify-between border-zinc-200 text-black opacity-80">
           <Link href='/' className="flex z-40 font-bold">
             <span>Decidiwise</span>
           </Link>
@@ -75,12 +76,12 @@ const Navbar = () => {
           <div className="block sm:hidden">
             <button
               onClick={() => setToggle(!toggle)}
-              className="text-white p-2 focus:outline-none"
+              className="text-black p-2 focus:outline-none"
             >
               {toggle ? (
-                <Image src="/close.svg" alt="Close" width={28} height={28} />
+                <X className='h-6 w-6' />
               ) : (
-                <Image src="/menu.svg" alt="Menu" width={28} height={28} />
+                <MoreVertical className='h-6 w-6' />
               )}
             </button>
           </div>
@@ -107,14 +108,14 @@ const Navbar = () => {
       <div
         className={`${
           !toggle ? "hidden" : "flex"
-        } p-6 black-gradient absolute top-16 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl bg-[#030712]/90 bg-blur`}
+        } p-6 absolute top-16 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl bg-white/80 backdrop-blur-lg transition-all text-2xl`}
       >
         <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4 ">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                active === nav.title ? "text-gray-600" : "text-white"
+                active === nav.title ? "text-gray-600" : "text-black"
               }`}
               onClick={() => {
                 setToggle(!toggle);

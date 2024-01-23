@@ -16,9 +16,9 @@ interface FAQSectionProps {
 
 const FAQSection: React.FC<FAQSectionProps> = ({ faqsData }) => {
   return (
-    <div className='container mx-auto w-full max-w-screen-xl px-2.5 md:px-20 mb-12 mt-28 sm:mt-40 text-white text-xl '>
-      <div className='sm:text-center'>
-        <h2 className='mt-2 mb-12 font-bold text-4xl text-white opacaity-80 sm:text-5xl'>
+    <div className='container mx-auto w-full max-w-screen-xl px-2.5 md:px-20 mb-12 mt-28 sm:mt-40 text-black text-xl '>
+      <div className=''>
+        <h2 className='mt-2 mb-12 font-bold text-4xl text-black opacaity-80 sm:text-5xl'>
           FAQs
         </h2>
       </div>
@@ -26,7 +26,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqsData }) => {
         <Accordion type="single" collapsible className="w-full">
           {faqsData.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger className='text-center p-4 font-bold'>{faq.question}</AccordionTrigger>
+              <AccordionTrigger className='p-4 font-bold text-left'>{faq.question}</AccordionTrigger>
               <AccordionContent className='px-4'>
                 {faq.answer}
               </AccordionContent>

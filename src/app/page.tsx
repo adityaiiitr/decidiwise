@@ -119,26 +119,27 @@ export default function Home() {
     <>
       {/* TOP VIEW SECTION */}
       <MaxWidthWrapper className='mb-12 mt-28 sm:mt-20 flex flex-col items-center justify-center text-center'>
-        <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-700 hover:bg-white/50'>
-          <p className='text-sm font-semibold text-white text-opacity-80'>
+        <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-black px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-700 hover:bg-white/50'>
+          <p className='text-sm font-semibold text-gray-zinc text-opacity-80'>
           Register Decidiwise For Early Access!
           </p>
         </div>
         
+        
     
-        <div className='text-white'>
+        <div className='text-black'>
           <h1 className='max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl'>
           The simplest way to  {' '}
             <span className='text-blue-600'>Connect</span>{' '}
             with Seniors for real-time college experiences
           </h1>
-          <p className='mt-5 max-w-4xl sm:text-lg text-white text-opacity-80'>
+          <p className='mt-5 max-w-4xl sm:text-lg text-black text-opacity-80'>
           Be the first to experience Decidiwise. Sign up now for early access and revolutionize the way you approach college decisions!
           </p>
         </div>
         {/* <div className="flex w-full max-w-sm items-center space-x-2 mt-5"> */}
         <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center space-x-2 mt-5">
-          <Input type="email" className="bg-white placeholder-opacity-80"placeholder="Enter your Email" value={email} onChange={(e) => {setEmail(e.target.value); console.log(email);}}/>
+          <Input type="email" className="bg-white placeholder-opacity-80 ring-black ring-1"placeholder="Enter your Email" value={email} onChange={(e) => {setEmail(e.target.value); console.log(email);}}/>
           {/* <Button type="submit">Subscribe</Button> */}
           <button disabled={loading}
           type="submit"
