@@ -2,7 +2,7 @@
 
 "use client"
 import { useState, FormEvent } from 'react'
-
+import { useToast } from "@/components/ui/use-toast"
 // import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import FAQSection from '@/components/FAQSection'
@@ -17,6 +17,7 @@ import { buttonVariants } from '@/components/ui/button'
 
 
 export default function Home() {
+  const { toast } = useToast()
   const faqsData = [
     {
       question: 'What is Decidiwise?',
@@ -91,6 +92,7 @@ export default function Home() {
     setLoading(true);
     e.preventDefault();
 
+
     try {
       const response = await fetch('https://decidiwise.onrender.com/api/submit-email', {
         method: 'POST',
@@ -105,13 +107,23 @@ export default function Home() {
       if (response.ok) {
         // Handle success
         setMessage(data.message);
+        
+        toast({
+          description: data.message,
+        })      
       } else {
         // Handle error
         setMessage(data.error || data.message);
+        toast({
+          description: message,
+          variant: "destructive"
+        })  
       }
     } catch (error) {
       console.error('Error submitting email:', error);
     }
+
+    
     setLoading(false);
   };
 
@@ -119,7 +131,7 @@ export default function Home() {
     <>
       {/* TOP VIEW SECTION */}
       <MaxWidthWrapper className='mb-12 mt-28 sm:mt-20 flex flex-col items-center justify-center text-center'>
-        <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-black px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-700 hover:bg-white/50'>
+        <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-black/40 px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-700 hover:bg-white/50'>
           <p className='text-sm font-semibold text-gray-zinc text-opacity-80'>
           Register Decidiwise For Early Access!
           </p>
@@ -139,7 +151,7 @@ export default function Home() {
         </div>
         {/* <div className="flex w-full max-w-sm items-center space-x-2 mt-5"> */}
         <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center space-x-2 mt-5">
-          <Input type="email" className="bg-white placeholder-opacity-80 ring-black ring-1"placeholder="Enter your Email" value={email} onChange={(e) => {setEmail(e.target.value); console.log(email);}}/>
+          <Input type="email" className="bg-white placeholder-opacity-80 ring-black/40 ring-1"placeholder="Enter your Email" value={email} onChange={(e) => {setEmail(e.target.value); console.log(email);}}/>
           {/* <Button type="submit">Subscribe</Button> */}
           <button disabled={loading}
           type="submit"
@@ -154,7 +166,7 @@ export default function Home() {
 
         </button>
         </form>
-        <p className='text-white mt-2'>{message}</p>
+        {/* <p className='text-black mt-2'>{message}</p> */}
 
         {/* </div> */}
 

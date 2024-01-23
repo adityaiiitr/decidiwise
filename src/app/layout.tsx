@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { cn } from '@/lib/utils'
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
             'min-h-screen font-sans grainy antialiased bg-[#3ccad4]',
             inter.className
           )}>
+        <Toaster />
         <Navbar/>
         {children}
         <Footer/>
