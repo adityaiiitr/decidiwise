@@ -20,11 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Toaster />
       <body className={cn(
             'min-h-screen font-sans grainy antialiased bg-white/80 backdrop-filter backdrop-blur-sm bg-opacity-80',
             inter.className
           )}>
-        <Toaster />
+        
         <Navbar/>
         {children}
         <Footer/>
