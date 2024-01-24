@@ -65,7 +65,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="sticky top-0 z-30 w-full bg-white/70 backdrop-blur-lg transition-all text-2xl">
+    <div className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex h-16 items-center justify-between border-zinc-200 text-black opacity-80">
           <Link href='/' className="flex z-40 font-bold">
@@ -93,7 +93,7 @@ const Navbar = () => {
                   className={`${buttonVariants({
                     variant: "ghost",
                     size: "sm",
-                  })} cursor-pointer ${pathname === nav.id ? 'overline text-opacity-20' : ''}`}
+                  })} cursor-pointer ${pathname === nav.id ? 'underline underline-offset-2  text-opacity-20' : ''}`}
                   onClick={() => setActive(nav.title)}
                 >
                   {nav.title}

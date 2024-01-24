@@ -94,15 +94,16 @@ export default function Home() {
 
 
     try {
-      const response = await fetch('https://decidiwise.onrender.com/api/submit-email', {
+      const response = await fetch(`/api/email?email=${email}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        // body: JSON.stringify({ email }),
       });
 
       const data = await response.json();
+      // console.log(data)
 
       if (response.ok) {
         // Handle success
@@ -123,7 +124,7 @@ export default function Home() {
       console.error('Error submitting email:', error);
     }
 
-    
+    // setMessage('');
     setLoading(false);
   };
 

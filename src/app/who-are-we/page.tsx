@@ -5,7 +5,7 @@ export default function Why() {
             Who Are We?
           </h2>
           <p className='mt-2 mb-12 text-lg text-black text-opacity-80 text-left'>
-            At [Your Platform Name], we are a team of passionate individuals committed to revolutionizing the way students 
+            At Decidiwsie, we are a team of passionate individuals committed to revolutionizing the way students 
             navigate their educational journey. We understand that choosing the right college is a pivotal decision, and we&apos;re here
             to empower you with firsthand insights that go beyond traditional research.
           </p>
