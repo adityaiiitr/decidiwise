@@ -11,7 +11,7 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
 
     const existingEmail = await Email.findOne({ email });
     if (existingEmail) {
-      return NextResponse.json({ error: 'Thankyou! You\'r Email is already registered.' }, { status: 200 });
+      return NextResponse.json({ message: 'Thankyou! You\'r Email is already registered.' }, { status: 200 });
     }
 
     const newEmail = new Email({email});
