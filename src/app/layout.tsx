@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <Toaster />
       <body className={cn(
-            'min-h-screen font-sans grainy antialiased bg-white/80 backdrop-filter backdrop-blur-sm bg-opacity-80',
+            'min-h-screen font-sans grainy antialiased bg-white',
             inter.className
           )}>
         
