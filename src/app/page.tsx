@@ -20,11 +20,11 @@ export default function Home() {
   const { toast } = useToast()
   const faqsData = [
     {
-      question: 'What is Decidiwise?',
-      answer: 'Decidiwise is a unique platform connecting aspiring students with current college seniors to provide real-time insights into college life, academics, and campus culture.',
+      question: 'What is Decidwise?',
+      answer: 'Decidwise is a unique platform connecting aspiring students with current college seniors to provide real-time insights into college life, academics, and campus culture.',
     },
     {
-      question: 'How can I benefit from connecting with seniors on Decidiwise?',
+      question: 'How can I benefit from connecting with seniors on Decidwise?',
       answer: 'By connecting with seniors, you can gain firsthand information about college experiences, making informed decisions about your academic journey, and avoiding potential regrets.',
     },
     {
@@ -32,20 +32,20 @@ export default function Home() {
       answer: 'You can ask any questions related to academics, campus life, faculty, extracurricular activities, and more. It\'s your chance to get personalized insights.',
     },
     {
-      question: 'Which colleges are represented by mentors on Decidiwise?',
+      question: 'Which colleges are represented by mentors on Decidwise?',
       answer: 'We are actively working to expand our network, and currently, we have mentors from all IIITs.As we grow, our expansion plan includes incorporating mentors from NITs, GFTIs, IITs, and other esteemed educational institutions. Our goal is to offer a broad spectrum of perspectives to help you make well-informed decisions about your academic journey.',
     },
     {
-      question: 'Will there be a cost associated with connecting with mentors on Decidiwise?',
-      answer: 'Yes, there will be a nominal fee for accessing the full benefits of connecting with mentors on Decidiwise. This fee will help us ensure the quality of the interactions and provide you with a valuable experience as you seek personalized insights from experienced mentors.',
+      question: 'Will there be a cost associated with connecting with mentors on Decidwise?',
+      answer: 'Yes, there will be a nominal fee for accessing the full benefits of connecting with mentors on Decidwise. This fee will help us ensure the quality of the interactions and provide you with a valuable experience as you seek personalized insights from experienced mentors.',
     },
    {
-      question: 'Will the information provided by mentors on Decidiwise be verified?',
+      question: 'Will the information provided by mentors on Decidwise be verified?',
       answer: 'We assure you that we will diligently verify the information provided by our mentors.We are committed to selecting experienced and knowledgeable mentors to ensure the accuracy and reliability of the insights they share. Your trust is our priority, and we will work to deliver credible and valuable information to aid in your decision-making process.',
     },
 {
-      question: 'How can I contribute as a senior to Decidiwise?',
-      answer: 'If you are a senior willing to share your college experiences, you can express your interest by reaching out to our team at [email]. We welcome your valuable insights and look forward to having you contribute to Decidiwise.',
+      question: 'How can I contribute as a senior to Decidwise?',
+      answer: 'If you are a senior willing to share your college experiences, you can express your interest by reaching out to our team at [email]. We welcome your valuable insights and look forward to having you contribute to Decidwise.',
     }
   ];
 
@@ -74,12 +74,12 @@ export default function Home() {
 
   const communityData = [
     {
-      title: 'Mentors Boarded on Decidiwise',
+      title: 'Mentors Boarded on Decidwise',
       count: 100,
       imageSrc: '/images/count100.png',
     },
     {
-      title: 'Colleges available on Decidiwise',
+      title: 'Colleges available on Decidwise',
       count: 25,
       imageSrc: '/images/count25.png',
     },
@@ -134,7 +134,7 @@ export default function Home() {
       <MaxWidthWrapper className='mb-12 mt-28 sm:mt-20 flex flex-col items-center justify-center text-center'>
         <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-black/40 px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-700 hover:bg-white/50'>
           <p className='text-sm font-semibold text-gray-zinc text-opacity-80'>
-          Register Decidiwise For Early Access!
+          Register Decidwise For Early Access!
           </p>
         </div>
         
@@ -147,7 +147,7 @@ export default function Home() {
             with Seniors for real-time college experiences
           </h1>
           <p className='mt-5 max-w-4xl sm:text-lg text-black text-opacity-80'>
-          Be the first to experience Decidiwise. Sign up now for early access and revolutionize the way you approach college decisions!
+          Be the first to experience Decidwise. Sign up now for early access and revolutionize the way you approach college decisions!
           </p>
         </div>
         {/* <div className="flex w-full max-w-sm items-center space-x-2 mt-5"> */}

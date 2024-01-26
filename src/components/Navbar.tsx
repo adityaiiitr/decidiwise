@@ -69,7 +69,7 @@ const Navbar = () => {
       <MaxWidthWrapper>
         <div className="flex h-16 items-center justify-between border-zinc-200 text-black opacity-80">
           <Link href='/' className="flex z-40 font-bold">
-            <span>Decidiwise</span>
+            <span>Decidwise</span>
           </Link>
 
           {/* Mobile Navbar Toggle Button */}

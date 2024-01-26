@@ -9,8 +9,8 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Decidiwise - 1:1 Mentorship ',
-  description: 'Be the first to experience Decidiwise. Sign up now for early access and revolutionize the way you approach college decisions!',
+  title: 'Decidwise - 1:1 Mentorship ',
+  description: 'Be the first to experience Decidwise. Sign up now for early access and revolutionize the way you approach college decisions!',
 }
 
 export default function RootLayout({
