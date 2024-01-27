@@ -75,12 +75,12 @@ export default function Home() {
   const communityData = [
     {
       title: 'Mentors Boarded on Decidwise',
-      count: 100,
+      count: 25,
       imageSrc: '/images/count100.png',
     },
     {
       title: 'Colleges available on Decidwise',
-      count: 25,
+      count: 18,
       imageSrc: '/images/count25.png',
     },
   ];

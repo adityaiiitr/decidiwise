@@ -30,7 +30,7 @@ const CommunitySection: React.FC<CommunitySectionProps> = ({ communityData }) =>
                 height={100}
                 className='w-32 h-32 object-contain'
               /> */}
-              <p className='w-16 h-16 object-contain text-7xl font-serif font-bold flex justify-center'>{feature.count}</p>
+              <p className='w-16 h-16 object-contain text-7xl font-serif font-bold flex justify-center'>{feature.count}+</p>
 
               <h3 className='text-black text-[20px] font-bold text-center'>
                 {feature.title}
